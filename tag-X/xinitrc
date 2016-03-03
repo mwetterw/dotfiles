@@ -1,0 +1,14 @@
+if [[ -f ~/.Xresources ]]; then
+  xrdb -load ~/.Xresources
+fi
+
+xset +fp ~/.local/share/fonts
+xscreensaver -nosplash &
+
+gnupglog="${HOME}/.gnupg/gpg-agent-info-${HOSTNAME}"
+if (pgrep -u "${USER}" gpg-agent); then
+    eval `cat ${gnupglog}`
+    eval `cut -d= -f1 ${gnupglog} | xargs echo export`
+else
+    eval `gpg-agent --enable-ssh-support --daemon`
+fi

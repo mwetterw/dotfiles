@@ -1,0 +1,22 @@
+[user]
+        name = Martin Wetterwald
+        email = martin@wetterwald.eu
+[color]
+        ui = auto
+[push]
+        default = current
+
+[alias]
+        lg = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        lga = !git lg --all
+        st = status
+[merge]
+        defaultToUpstream = true
+        tool = vimdiff
+        conflictstyle = diff3
+[core]
+        autocrlf = input
+[mergetool]
+        prompt = false
+[http]
+        postBuffer = 524288000

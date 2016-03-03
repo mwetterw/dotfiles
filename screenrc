@@ -1,0 +1,20 @@
+startup_message off
+deflogin on
+autodetach on
+
+vbell on
+vbell_msg "   Wuff  ----  Wuff!!  "
+
+defscrollback 1024
+
+hardstatus alwayslastline "%{b kB}%{s gB}%c:%s%{b kB} %{b kR}%H %{b kB}%{s yB}%l%{b kB} %{b kB}%{rs Y}%-Lw%{BY}%50>%n%{R}%f%{B} %t%{YB}%+Lw%<"
+
+termcapinfo xterm*|linux*|rxvt*|Eterm* OP
+
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+
+termcapinfo xterm*|linux*|rxvt*|Eterm* ti@:te@
+
+sorendition =s WB 
+msgwait 3
+bell "^GBell in window %"

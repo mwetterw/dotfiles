@@ -1,0 +1,17 @@
+export PATH="$HOME/.local/bin:$PATH"
+
+alias iptl='sudo iptables --line-numbers -vnL'
+
+function _update_ps1() {
+   PS1="$(~/.dotfiles/powerline-shell/powerline-shell.py $? 2> /dev/null)"
+}
+
+if [ -x ~/.dotfiles/powerline-shell/powerline-shell.py ]; then
+    if [ "$TERM" != "linux" ]; then
+        PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+    fi
+fi
+
+if [ -f /etc/bash_completion.d/password-store ]; then
+    source /etc/bash_completion.d/password-store
+fi
