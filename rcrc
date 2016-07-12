@@ -1,1 +1,1 @@
-EXCLUDES="README.md install_rcm.sh"
+EXCLUDES="README.md install.sh"

@@ -2,5 +2,3 @@
 if [ -d ~/.vim ]; then
     vim -u "$HOME"/.vimrc.plugins +PlugInstall +qa
 fi
-
-source "$HOME"/.profile
