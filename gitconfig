@@ -9,14 +9,19 @@
 [alias]
         lg = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
         lga = !git lg --all
+
         redate = "!f() { git filter-branch --env-filter 'export GIT_COMMITTER_DATE=\"$GIT_AUTHOR_DATE\"' $@ --; }; f"
+
         ahead = "!f() { remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null); [ -n \"$remote\" ] && git log $remote..; }; f"
+
         amd = commit --amend -aC HEAD
+        rmt = remote -v show
 
         st = status
         ci = commit
         co = checkout
         rst = reset
+
 
 [merge]
         defaultToUpstream = true
@@ -24,6 +29,7 @@
         conflictstyle = diff3
 [core]
         autocrlf = input
+        editor = vim
 [mergetool]
         prompt = false
 [http]
