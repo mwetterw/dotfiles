@@ -2,3 +2,7 @@
 if [ -d ~/.vim ]; then
     vim -u "$HOME"/.vimrc.plugins +PlugInstall +qa
 fi
+
+if [ ! -x ~/.dotfiles/powerline-shell/powerline-shell.py ]; then
+    cd ~/.dotfiles/powerline-shell && ./install.py
+fi
