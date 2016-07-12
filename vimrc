@@ -48,21 +48,9 @@ set noswapfile
 filetype plugin indent on
 
 " Load plugins
-call plug#begin('~/.vim/plugged')
-Plug 'fatih/molokai'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Lokaltog/powerline'
-Plug 'scrooloose/syntastic'
-Plug 'vim-airline/vim-airline'
-Plug 'derekwyatt/vim-fswitch', { 'for': ['c', 'cpp'] }
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'bronson/vim-trailing-whitespace'
-
-Plug 'fatih/vim-go', { 'for': 'go' }
-call plug#end()
+if filereadable(expand("~/.vimrc.plugins"))
+    source ~/.vimrc.plugins
+endif
 " ---------------------------------------------------------------- }}}
 
 " Vim user interface --------------------------------------------- {{{
