@@ -1,7 +1,5 @@
 export PATH="$HOME/.local/bin:$PATH"
 
-alias iptl='sudo iptables --line-numbers -vnL'
-
 function _update_ps1() {
    PS1="$(~/.dotfiles/powerline-shell/powerline-shell.py $? 2> /dev/null)"
 }
