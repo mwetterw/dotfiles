@@ -3,5 +3,4 @@ dotfiles
 
 Install
 -------
-    git clone https://github.com/MartinWetterwald/dotfiles.git ~/.dotfiles
-    ~/.dotfiles/install.sh
+    git clone --recursive https://github.com/MartinWetterwald/dotfiles.git ~/.dotfiles && ~/.dotfiles/install.sh
