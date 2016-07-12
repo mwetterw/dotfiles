@@ -3,6 +3,7 @@ if [[ -f ~/.Xresources ]]; then
 fi
 
 xset +fp ~/.local/share/fonts
+xset r rate 200 44
 xscreensaver -nosplash &
 
 gnupglog="${HOME}/.gnupg/gpg-agent-info-${HOSTNAME}"
