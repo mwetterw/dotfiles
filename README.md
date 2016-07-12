@@ -1,7 +1,5 @@
 dotfiles
 ===================
-git clone git://github.com/thoughtbot/dotfiles.git ~/dotfile
-
 
 Install
 -------
