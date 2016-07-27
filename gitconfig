@@ -4,10 +4,10 @@
 [color]
         ui = auto
 [push]
-        default = current
+    default = upstream
 
 [alias]
-        lg = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        lg = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
         lga = !git lg --all
 
         redate = "!f() { git filter-branch --env-filter 'export GIT_COMMITTER_DATE=\"$GIT_AUTHOR_DATE\"' $@ --; }; f"
@@ -21,6 +21,7 @@
         ci = commit
         co = checkout
         rst = reset
+        cp = cherry-pick
 
 
 [merge]
