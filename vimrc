@@ -238,7 +238,8 @@ if has("gui_running")
 endif
 
 " Configure for terminal
-if &term =~ "xterm"
+" screen-256color is for tmux
+if &term =~ "xterm" || &term =~ "screen-256color"
     colorscheme molokai
     set background=dark
     if has("terminfo")
