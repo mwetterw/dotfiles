@@ -1,37 +1,39 @@
 [user]
-        name = Martin Wetterwald
-        email = martin@wetterwald.eu
+    name = Martin Wetterwald
+    email = martin@wetterwald.eu
 [color]
-        ui = auto
+    ui = auto
 [push]
     default = upstream
 
 [alias]
-        lg = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
-        lga = !git lg --all
+    lg = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lga = !git lg --all
 
-        redate = "!f() { git filter-branch --env-filter 'export GIT_COMMITTER_DATE=\"$GIT_AUTHOR_DATE\"' $@ --; }; f"
+    redate = "!f() { git filter-branch --env-filter 'export GIT_COMMITTER_DATE=\"$GIT_AUTHOR_DATE\"' $@ --; }; f"
 
-        ahead = "!f() { remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null); [ -n \"$remote\" ] && git log $remote..; }; f"
+    ahead = "!f() { remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null); [ -n \"$remote\" ] && git log $remote..; }; f"
 
-        amd = commit --amend -aC HEAD
-        rmt = remote -v show
+    amd = commit --amend -aC HEAD
+    rmt = remote -v show
 
-        st = status
-        ci = commit
-        co = checkout
-        rst = reset
-        cp = cherry-pick
-
+    st = status
+    ci = commit
+    co = checkout
+    rst = reset
+    cp = cherry-pick
 
 [merge]
-        defaultToUpstream = true
-        tool = vimdiff
-        conflictstyle = diff3
+    defaultToUpstream = true
+    tool = vimdiff
+    conflictstyle = diff3
 [core]
-        autocrlf = input
-        editor = vim
+    autocrlf = input
+    editor = vim
 [mergetool]
-        prompt = false
+    prompt = false
 [http]
-        postBuffer = 524288000
+    postBuffer = 524288000
+
+[include]
+    path = .gitconfig.local
