@@ -11,6 +11,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tikhomirov/vim-glsl'
-
+Plug 'tpope/vim-commentary'
 Plug 'fatih/vim-go', { 'for': 'go' }
 call plug#end()
