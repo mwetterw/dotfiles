@@ -113,8 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export TERM=xterm-256color
-
 if [ -f ~/.source ]; then
     source ~/.source
 fi
