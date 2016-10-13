@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ -d ~/.vim ]; then
-    vim -u "$HOME"/.vimrc.plugins +PlugInstall +qa
+    vim -u "$HOME"/.vim/plugins.vim +PlugInstall +qa
 fi
 
 if [ ! -x ~/.dotfiles/powerline-shell/powerline-shell.py ]; then
