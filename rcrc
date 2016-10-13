@@ -1,1 +1,2 @@
 EXCLUDES="README.md install.sh powerline-shell"
+SYMLINK_DIRS="vim"
