@@ -48,8 +48,8 @@ set noswapfile
 filetype plugin indent on
 
 " Load plugins
-if filereadable(expand("~/.vimrc.plugins"))
-    source ~/.vimrc.plugins
+if filereadable(expand("~/.vim/plugins.vim"))
+    source ~/.vim/plugins.vim
 endif
 " ---------------------------------------------------------------- }}}
 
