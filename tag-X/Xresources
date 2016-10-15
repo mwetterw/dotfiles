@@ -1,6 +1,4 @@
-URxvt.termName: xterm-256color
-
-URxvt*font: xft:Anonymous Pro for Powerline:regular:size=11
+URxvt*font: xft:Droid Sans Mono for Powerline:regular:size=11
 
 ! No scroll bars
 URxvt.scrollBar: false

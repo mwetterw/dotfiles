@@ -218,14 +218,15 @@ set incsearch
 " Colors and Fonts ----------------------------------------------- {{{
 
 
-
 " Editing font
 set guifont=Droid\ Sans\ Mono\ 11
 
+" Colorscheme
+set background=dark
+colorscheme molokai
+
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set background=dark
-    colorscheme molokai
     set go-=r
     set go-=R
     set go-=l
@@ -235,23 +236,6 @@ if has("gui_running")
     set go+=e
     set t_Co=256
     set gtl=%M\ %t
-endif
-
-" Configure for terminal
-" screen-256color is for tmux
-if &term =~ "xterm" || &term =~ "screen-256color"
-    colorscheme molokai
-    set background=dark
-    if has("terminfo")
-        let g:CommandTCancelMap=['<ESC>','<C-c>']
-        set t_Co=256
-        set t_Sf=<Esc>[3%p1%dm
-        set t_Sb=<Esc>[4%p1%dm
-    else
-        set t_Co=8
-        set t_Sf=<Esc>[3%dm
-        set t_Sb=<Esc>[4%dm
-    endif
 endif
 
 " Spelling
