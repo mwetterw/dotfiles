@@ -294,6 +294,9 @@ if has("autocmd")
 
 " Auto open NERDTree if no args given
     autocmd vimenter * if !argc() | NERDTree | endif
+
+" Corrects C++ comments syntax
+    autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 endif
 
 set completeopt=menu,menuone
