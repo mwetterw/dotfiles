@@ -23,6 +23,8 @@
 " Sets how many lines of history Vim has to remember
 set history=700
 
+set nocompatible
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
