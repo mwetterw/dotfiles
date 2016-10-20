@@ -285,19 +285,19 @@ set showtabline=0
 set splitright
 
 if has("autocmd")
-" Return to last edit position when opening files
+    " Return to last edit position when opening files
     autocmd BufReadPost *
                 \ if line("'\"") > 0 && line("'\"") <= line("$") |
                 \ exe "normal! g`\"" |
                 \ endif
 
-" Cd directory when opening files
+    " Cd directory when opening files
     "autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
 
-" Auto open NERDTree if no args given
+    " Auto open NERDTree if no args given
     autocmd vimenter * if !argc() | NERDTree | endif
 
-" Corrects C++ comments syntax
+    " Corrects C++ comments syntax
     autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 endif
 
