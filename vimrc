@@ -143,6 +143,9 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint' , 'govet']
 
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
 let g:go_fmt_command = "goimports"
 let g:go_play_open_browser = 0
 let g:go_fmt_fail_silently = 1
