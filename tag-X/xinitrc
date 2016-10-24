@@ -4,4 +4,5 @@ fi
 
 xset +fp ~/.local/share/fonts
 xset r rate 200 44
+urxvtd -q -o -f
 xscreensaver -nosplash &
