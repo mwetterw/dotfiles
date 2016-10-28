@@ -1,7 +1,13 @@
-URxvt*font: xft:Droid Sans Mono for Powerline:regular:size=11
+URxvt.font: xft:Droid Sans Mono for Powerline:regular:size=11
+URxvt.letterSpace: -1
 
-! No scroll bars
+! Scroll
 URxvt.scrollBar: false
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+URxvt.secondaryScreen: true
+URxvt.secondaryScroll: false
 
 ! Allow bell
 URxvt.urgentOnBell: true
@@ -22,7 +28,6 @@ URxvt.keysym.C-Delete: perl:matcher:last
 URxvt.keysym.M-Delete: perl:matcher:list
 
 ! Theme
-
 ! Background
 URxvt.background: #101010
 URxvt.foreground: #d0d0d0

@@ -1,8 +1,23 @@
-if [ -f ~/.Xresources ]; then
-  xrdb -load ~/.Xresources
+RESOURCES=~/.dotfiles/tag-X/resources/.Xresources
+FONTS=~/.local/share/fonts
+
+xset +fp $FONTS
+
+xset r rate 200 44
+
+# man xkeyboard-config
+setxkbmap \
+    -option \
+    -option compose:menu \
+    -option caps:escape \
+    -option lv3:ralt_switch \
+    -option eurosign:e
+
+if [ -f $RESOURCES ]; then
+  xrdb -load $RESOURCES
 fi
 
-xset +fp ~/.local/share/fonts
-xset r rate 200 44
 urxvtd -q -o -f
-xscreensaver -nosplash &
+xscreensaver -log /dev/null > /dev/null 2>&1 &
+
+exec awesome
