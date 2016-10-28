@@ -245,7 +245,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
 
-    awful.key({ "Mod1", "Control"    }, "l", function () awful.util.spawn("xscreensaver-command -lock") end),
+    awful.key({ "Mod1", "Control"    }, "l", function () awful.util.spawn_with_shell("xscreensaver-command -lock > /dev/null") end),
 
     awful.key({ modkey,           }, "j",
         function ()
