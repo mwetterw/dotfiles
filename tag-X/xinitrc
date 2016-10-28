@@ -20,4 +20,8 @@ fi
 urxvtd -q -o -f
 xscreensaver -no-capture-stderr -log /dev/null > /dev/null 2>&1 &
 
+if [ -x $(which numlockx) ]; then
+    numlockx on
+fi
+
 exec awesome
