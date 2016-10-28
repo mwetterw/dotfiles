@@ -18,6 +18,6 @@ if [ -f $RESOURCES ]; then
 fi
 
 urxvtd -q -o -f
-xscreensaver -log /dev/null > /dev/null 2>&1 &
+xscreensaver -no-capture-stderr -log /dev/null > /dev/null 2>&1 &
 
 exec awesome
