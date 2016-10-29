@@ -1,5 +1,10 @@
-URxvt.font: xft:Droid Sans Mono for Powerline:regular:size=11
-URxvt.letterSpace: -1
+! Fonts
+URxvt.font: xft:Inconsolata for Powerline:regular:size=13,xft:AR PL UKai TW,xft:Unifont:size=10
+URxvt.letterSpace: 0
+
+! Input Method
+URxvt.preeditType: Root
+URxvt.inputMethod: fcitx
 
 ! Scroll
 URxvt.scrollBar: false
