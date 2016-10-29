@@ -1,7 +1,5 @@
 " Summary -------------------------------------------------------- {{{
 "
-" Author: Jean-Marie Comets <jean.marie.comets@gmail.com>
-"
 " Sections:
 " - Preamble
 " - Vim user interface
@@ -70,7 +68,7 @@ set scrolloff=5
 set wildmenu
 
 " Enhanced completion (shell like first, then wildmenu)
-set wildmode=list,full
+set wildmode=longest:full
 
 " Ignore compiled files and backups
 set wildignore=*.o,*~,*.pyc,*.gch
@@ -309,7 +307,7 @@ set completeopt=menu,menuone
 " NERDTree options
 let NERDChristmasTree=1
 let NERDTreeShowBookmarks=1
-let NERDTreeShowHidden=0
+let NERDTreeShowHidden=1
 let NERDTreeWinSize=45
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
@@ -319,7 +317,7 @@ let NERDTreeChDirMode=2
 
 " Various key remaps --------------------------------------------- {{{
 
-" Allow to keep Q down to kill all gvim instances when invoked by git
+" Allow to keep Q down to kill all vim instances when invoked by git
 map Q :qa<Enter>
 
 " Toogle line numbers display
@@ -327,7 +325,7 @@ noremap <silent> <F6> :set number!<cr>
 
 " Toogle NERDTree
 " nnoremap <silent> <leader>n :NERDTreeToggle<CR>
-nnoremap <silent> <leader>n :NERDTreeTabsToggle<CR>
+nnoremap <silent> <leader>n :NERDTreeMirrorToggle<CR>
 
 " Treat long lines as break lines (useful when moving around in them)
 nnoremap j gj
@@ -342,16 +340,6 @@ inoremap <silent> <M-j> <Esc>:m .+1<cr>==gi
 inoremap <silent> <M-k> <Esc>:m .-2<cr>==gi
 vnoremap <silent> <M-j> :m '>+1<cr>gv=gv
 vnoremap <silent> <M-k> :m '<-2<cr>gv=gv
-
-" Remap Vim 0 to first non-blank character
-nmap 0 ^
-
-" Exchange "`" and "'"
-" nnoremap ' `
-" nnoremap ` '
-
-" Map ";" to ":" (avoid typos)
-"nnoremap ; :
 
 " Resolve inconsistency between "Y" (line),
 " and "D" (til end of line)
