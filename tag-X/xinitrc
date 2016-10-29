@@ -19,6 +19,12 @@ fi
 
 urxvtd -q -o -f
 xscreensaver -no-capture-stderr -log /dev/null > /dev/null 2>&1 &
+connman-ui-gtk > /dev/null 2>&1 &
+
+fcitx > /dev/null 2>&1
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 if [ -x $(which numlockx) ]; then
     numlockx on
