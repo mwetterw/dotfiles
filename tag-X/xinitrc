@@ -1,4 +1,3 @@
-RESOURCES=~/.dotfiles/tag-X/resources/.Xresources
 FONTS=~/.local/share/fonts
 
 xset +fp $FONTS
@@ -13,8 +12,8 @@ setxkbmap \
     -option lv3:ralt_switch \
     -option eurosign:e
 
-if [ -f $RESOURCES ]; then
-  xrdb -load $RESOURCES
+if [ -f ~/.Xresources ]; then
+  xrdb -I"$HOME/.Xresources.d" -load ~/.Xresources
 fi
 
 urxvtd -q -o -f
