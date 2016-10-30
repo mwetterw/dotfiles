@@ -29,4 +29,7 @@ if [ -x $(which numlockx) ]; then
     numlockx on
 fi
 
+# Disable annoying bell
+xset -b
+
 exec awesome
