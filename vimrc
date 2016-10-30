@@ -91,7 +91,7 @@ set whichwrap+=<,>,h,l
 
 " No annoying sound on errors
 set noerrorbells
-set novisualbell
+set visualbell
 set t_vb=
 set timeoutlen=500
 
