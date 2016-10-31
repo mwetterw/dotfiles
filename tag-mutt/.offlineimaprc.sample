@@ -1,0 +1,48 @@
+[general]
+accounts = test
+maxsyncaccounts = 1
+maxconnections = 1
+ui = ttyui
+socktimeout = 90
+
+[Account test]
+localrepository = test-local
+remoterepository = test-remote
+synclabels = yes
+labelsheader = X-Keywords
+
+[Repository test-remote]
+type = Gmail
+remoteuser = email@test.com
+remotepass = pass
+nametrans = lambda folder: {
+                            '[Gmail]/All Mail':     'All',
+                            '[Gmail]/Chats':        'Chats',
+                            '[Gmail]/Drafts':       'Drafts',
+                            '[Gmail]/Sent Mail':    'Sent',
+                            '[Gmail]/Important':    'Important',
+                            '[Gmail]/Spam':         'Spam',
+                            '[Gmail]/Starred':      'Starred',
+                            '[Gmail]/Trash':        'Trash'
+                            }.get(folder, folder)
+folderfilter = lambda folder: folder not in [
+                                                '[Gmail]/All Mail',
+                                                '[Gmail]/Important',
+                                                '[Gmail]/Starred'
+                                            ]
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+
+[Repository test-local]
+type = GmailMaildir
+localfolders = /Mail/email@test.com
+nametrans = lambda folder: {
+                            'All':          '[Gmail]/All Mail',
+                            'Chats':        '[Gmail]/Chats',
+                            'Drafts':       '[Gmail]/Drafts',
+                            'Sent':         '[Gmail]/Sent Mail',
+                            'Important':    '[Gmail]/Important',
+                            'Spam':         '[Gmail]/Spam',
+                            'Starred':      '[Gmail]/Starred',
+                            'Trash':        '[Gmail]/Trash'
+                            }.get(folder, folder)

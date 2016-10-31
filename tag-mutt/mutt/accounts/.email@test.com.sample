@@ -1,0 +1,6 @@
+# vim: filetype=muttrc
+
+set spoolfile = +email@test.com/INBOX
+set record = +email@test.com/Sent
+set postponed = +email@test.com/Drafts
+set trash = +email@test.com/Trash

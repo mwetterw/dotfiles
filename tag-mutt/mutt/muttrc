@@ -1,0 +1,61 @@
+# vim: filetype=muttrc
+
+# No sleep time
+set sleep_time=0
+
+# Paths ----------------------------------------------
+set alias_file       = ~/.mutt/aliases       # where to store aliases
+set header_cache     = ~/.mutt/cache/headers # where to store headers
+set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
+set certificate_file = ~/.mutt/certificates  # where to store certs
+set tmpdir           = ~/.mutt/tmp           # where to keep temp files
+set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
+set signature        = ~/.mutt/sig           # my signature file
+
+# Basic Options --------------------------------------
+set wait_key = no        # shut up, mutt
+set mbox_type = Maildir  # mailbox type
+set timeout = 3          # idle time before scanning
+set mail_check = 0       # minimum time between scans
+set quit                 # don't ask, just do!!
+set beep_new             # bell on new mails
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+set editor         = "vim"
+set shell          = "/bin/bash"
+unset mark_old
+set mail_check_recent=no # keep the folder new if there is a new mail
+
+# Header Options -------------------------------------
+ignore *                                         # ignore all headers
+unignore from: to: cc: date: subject: reply-to:  # show only these
+unhdr_order *                                    # some distros order things by default
+hdr_order from: to: cc: date: reply-to: subject: # and in this order
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/plain text/enriched text/html
+
+# Folder format -------------------------------------
+set date_format = "%d/%m/%y %H:%M"
+set index_format = "[%Z]%4C| %D %?X?(%X)&   ? %-20.20F  %.100s %> %5c%"
+set folder_format=" %2C %t %N %f %> %d "
+set pager_format = "[%b] [%Z] %D [From: %f] %> [%e/%E] %5c%"
+
+# View attachments properly.
+bind attach <return> view-mailcap
+
+auto_view text/html
+
+# Source
+source "~/.mutt/charset"
+source "~/.mutt/compose"
+source "~/.mutt/crypto"
+source "~/.mutt/index"
+source "~/.mutt/macros"
+source "~/.mutt/pager"
+source "~/.mutt/sidebar"
+source "~/.mutt/colors"
+
+# Source local conf
+source `FILE=$HOME/.mutt/accounts/main; if [ ! -s "$FILE" ]; then FILE=/dev/null;fi;echo "$FILE"`
+source `FILE=$HOME/.mutt/aliases; if [ ! -s "$FILE" ]; then FILE=/dev/null;fi;echo "$FILE"`

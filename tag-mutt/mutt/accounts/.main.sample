@@ -1,0 +1,16 @@
+# vim: filetype=muttrc
+
+set folder = /Mail
+mailboxes +email@test.com
+mailboxes \
+    +email@test.com/INBOX \
+    +email@test.com/Sent \
+    +email@test.com/Drafts \
+    +email@test.com/Sent \
+    +email@test.com/Chats \
+    +email@test.com/Trash \
+    +email@test.com/Spam
+
+source ~/.mutt/accounts/email@test.com
+
+folder-hook email@test.com/*  source ~/.mutt/accounts/email@test.com
