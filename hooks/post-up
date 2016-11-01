@@ -6,3 +6,9 @@ fi
 if [ ! -x ~/.dotfiles/powerline-shell/powerline-shell.py ]; then
     cd ~/.dotfiles/powerline-shell && ./install.py
 fi
+
+if [ -d ~/.mutt ]; then
+    mkdir -p ~/.mutt/cache/headers
+    mkdir -p ~/.mutt/cache/bodies
+    mkdir -p ~/.mutt/tmp
+fi
