@@ -4,6 +4,7 @@ maxsyncaccounts = 1
 maxconnections = 1
 ui = ttyui
 socktimeout = 90
+pythonfile = ~/.offlineimap.py
 
 [Account test]
 localrepository = test-local
@@ -14,7 +15,7 @@ labelsheader = X-Keywords
 [Repository test-remote]
 type = Gmail
 remoteuser = email@test.com
-remotepass = pass
+remotepasseval = fetch_pass('Provider/email@test.com')
 nametrans = lambda folder: {
                             '[Gmail]/All Mail':     'All',
                             '[Gmail]/Chats':        'Chats',
