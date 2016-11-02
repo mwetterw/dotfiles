@@ -23,6 +23,7 @@ set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 set editor         = "vim"
 set shell          = "/bin/bash"
+set delete         = "yes"
 unset mark_old
 set mail_check_recent=no # keep the folder new if there is a new mail
 
