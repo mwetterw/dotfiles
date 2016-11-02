@@ -1,5 +1,6 @@
 # vim: filetype=muttrc
 
+set sendmail = /usr/bin/msmtp
 set realname = $my_real_name         # who am i?
 set envelope_from                    # which from?
 set sig_dashes                       # dashes before sig
