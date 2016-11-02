@@ -1,5 +1,7 @@
 # vim: filetype=muttrc
 
+set from = "Email Test <email@test.com>"
+
 set spoolfile = +email@test.com/INBOX
 set record = +email@test.com/Sent
 set postponed = +email@test.com/Drafts
