@@ -1,0 +1,15 @@
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        ~/.msmtp.log
+
+account         EmailTest
+host            smtp.test.com
+port            587
+from            email@test.com
+user            email@test.com
+passwordeval    "pass Mail/Provider/email@test.com"
+
+# Set a default account
+account default : EmailTest
