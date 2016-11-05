@@ -12,8 +12,8 @@ setxkbmap \
     -option lv3:ralt_switch \
     -option eurosign:e
 
-if [ -f ~/.Xresources ]; then
-  xrdb -I"$HOME/.Xresources.d" -load ~/.Xresources
+if [ -f ~/.Xresources.ad ]; then
+  xrdb -I"$HOME/.Xresources.d" -load ~/.Xresources.ad
 fi
 
 urxvtd -q -o -f
