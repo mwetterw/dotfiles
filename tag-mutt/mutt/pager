@@ -1,13 +1,13 @@
 # vim: filetype=muttrc
 
 # Pager Key Bindings ---------------------------------
-bind pager k  previous-line
-bind pager j  next-line
-bind pager gg top
-bind pager G  bottom
-bind pager R  group-reply
-bind index \Cd half-down
-bind index \Cu half-up
+bind pager k    previous-line
+bind pager j    next-line
+bind pager gg   top
+bind pager G    bottom
+bind pager R    group-reply
+bind pager \Cd  half-down
+bind pager \Cu  half-up
 
 # Pager View Options ---------------------------------
 set pager_index_lines = 10 # number of index lines to show
