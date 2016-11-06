@@ -4,7 +4,7 @@
 # # stop reading the current config file.
 ifndef USE_SIDEBAR finish
 
-set sidebar_width=38
+set sidebar_width=34
 set sidebar_visible=yes
 set sidebar_divider_char=" "
 set sidebar_folder_indent=yes
@@ -13,8 +13,9 @@ set sidebar_short_path=yes
 set sidebar_format=" %B%?F? [%F]?%* %?N?(%N) ?%S "
 
 # Enable extended buffy mode to calculate total, new, and flagged
-# # message counts for each mailbox.
+# message counts for each mailbox.
 set mail_check_stats
+set mail_check_stats_interval=60
 
 color sidebar_ordinary color241 color234
 color sidebar_flagged color241 color234
