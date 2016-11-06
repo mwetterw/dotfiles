@@ -189,7 +189,7 @@ set tabstop=4
 
 " Invisible characters
 set nolist
-set listchars=tab:▸-,eol:¬,trail:⋅,extends:❯,precedes:❮,nbsp:⚡
+set listchars=tab:▸-,eol:¬,trail:⋅,extends:❯,precedes:❮,nbsp:⇼
 set showbreak=↪
 
 " Virtual edit (awesome)
