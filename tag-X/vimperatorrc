@@ -1,1 +1,2 @@
 set hintchars=hsdfgyuiopqwertnmcv
+set editor="urxvtc -e vim"
