@@ -1,2 +1,2 @@
-EXCLUDES="README.md install.sh install_fonts.sh powerline-shell"
+EXCLUDES="README.md install*.sh powerline-shell"
 SYMLINK_DIRS="vim"
