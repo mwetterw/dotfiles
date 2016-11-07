@@ -19,15 +19,15 @@ unset maildir_header_cache_verify
 # Basic Options --------------------------------------
 unset wait_key           # shut up, mutt
 set mbox_type = Maildir  # mailbox type
-set timeout = 3          # idle time before scanning
-set mail_check = 0       # minimum time between scans
+set timeout = 3          # don't block too much time when waiting for user input
+set mail_check = 5       # minimum time between scans
 set quit                 # don't ask, just do!!
 set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 set editor         = "vim"
 set shell          = "/bin/bash"
-set delete
+set delete               # When deleting email, first move it to trash
 unset mark_old
 unset mail_check_recent
 unset user_agent         # Don't leak out Mutt version in sent emails
