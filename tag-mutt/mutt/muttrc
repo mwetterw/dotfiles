@@ -28,8 +28,8 @@ set thorough_search      # strip headers and eval mimes before searching
 set editor         = "vim"
 set shell          = "/bin/bash"
 set delete
-set mark_old
-set mail_check_recent
+unset mark_old
+unset mail_check_recent
 unset user_agent         # Don't leak out Mutt version in sent emails
 
 # Header Options -------------------------------------
