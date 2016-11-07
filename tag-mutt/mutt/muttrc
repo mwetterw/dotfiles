@@ -17,7 +17,7 @@ unset maildir_header_cache_verify
 # unset header_cache_compress
 
 # Basic Options --------------------------------------
-set wait_key = no        # shut up, mutt
+unset wait_key           # shut up, mutt
 set mbox_type = Maildir  # mailbox type
 set timeout = 3          # idle time before scanning
 set mail_check = 0       # minimum time between scans

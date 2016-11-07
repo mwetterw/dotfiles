@@ -34,11 +34,11 @@ set pgp_good_sign="^gpg: Good signature from"
 #set crypt_replysign
 
 # automatically encrypt outcoming messages
-#set crypt_autoencrypt=yes
+#set crypt_autoencrypt
 # encrypt only replies to signed messages
-#set crypt_replyencrypt=yes
+#set crypt_replyencrypt
 # encrypt and sign replies to encrypted messages
-#set crypt_replysignencrypted=yes
+#set crypt_replysignencrypted
 
 # automatically verify the sign of a message when opened
-#set crypt_verify_sig=yes
+#set crypt_verify_sig
