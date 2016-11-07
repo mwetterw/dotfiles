@@ -10,6 +10,7 @@ bind pager \Cd  half-down
 bind pager \Cu  half-up
 
 # Pager View Options ---------------------------------
+set pager_format = "[%b] [%Z] %D [From: %f] %> [%e/%E] %5c%"
 set pager_index_lines = 10 # number of index lines to show
 set pager_context = 3      # number of context lines to show
 set pager_stop             # don't go to next message automatically

@@ -1,6 +1,7 @@
 # vim: filetype=muttrc
 
 # Index View Options ---------------------------------
+set index_format = "[%Z]%4C| %D %?X?(%X)&   ? %-20.20F  %.100s %> %5c%"
 set sort = threads                         # like gmail
 set sort_aux = reverse-last-date-received  # like gmail
 set uncollapse_jump                        # jump to 1st unread when uncollapsing thread
