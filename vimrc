@@ -242,15 +242,20 @@ if has("gui_running")
 endif
 
 " Spelling
-set spelllang=fr,de,en
+set spelllang=fr,en,de
+
 hi clear SpellBad
+hi SpellBad cterm=italic,bold,underline ctermfg=208
 hi SpellBad guifg=#B58900 gui=undercurl guisp=#D63034
 
 hi clear SpellCap
+hi SpellCap cterm=italic ctermfg=208
 hi SpellCap gui=undercurl guisp=#B58900
 
 hi clear SpellRare
+hi SpellRare ctermfg=200
 hi SpellRare guifg=#409207
+
 
 
 " Color of icons side bar
