@@ -1,5 +1,5 @@
 # Images
-image/*;      feh %s
+image/*;      feh --fullscreen %s
 
 # PDFs
 application/pdf; zathura %s
