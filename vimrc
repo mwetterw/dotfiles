@@ -338,14 +338,6 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-" Move a line of text using ALT+[jk]
-nnoremap <silent> <M-j> :m .+1<cr>==
-nnoremap <silent> <M-k> :m .-2<cr>==
-inoremap <silent> <M-j> <Esc>:m .+1<cr>==gi
-inoremap <silent> <M-k> <Esc>:m .-2<cr>==gi
-vnoremap <silent> <M-j> :m '>+1<cr>gv=gv
-vnoremap <silent> <M-k> :m '<-2<cr>gv=gv
-
 " Resolve inconsistency between "Y" (line),
 " and "D" (til end of line)
 "nmap D dd
