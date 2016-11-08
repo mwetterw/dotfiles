@@ -293,8 +293,10 @@ set splitright
 if has("autocmd")
     " Return to last edit position when opening files
     autocmd BufReadPost *
-                \ if line("'\"") > 0 && line("'\"") <= line("$") |
-                \ exe "normal! g`\"" |
+                \ if !exists("b:nolasteditpos")
+                        \ && line("'\"") > 0
+                        \ && line("'\"") <= line("$") |
+                    \ exe "normal! g`\"" |
                 \ endif
 
     " Cd directory when opening files
