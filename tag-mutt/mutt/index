@@ -1,14 +1,18 @@
 # vim: filetype=muttrc
 
-# Index View Options ---------------------------------
 set index_format = "[%Z]%4C| %D %?X?(%X)&   ? %-20.20F  %.100s %> %5c%"
-set sort = threads                         # like gmail
-set sort_aux = reverse-last-date-received  # like gmail
-set uncollapse_jump                        # jump to 1st unread when uncollapsing thread
-unset collapse_unread                      # don't collapse on an unread message
 
-set sort_re                                # thread based on regex
+# Threads :) -----------------------------------------
+set sort = threads
+set sort_aux = reverse-last-date-received
+set sort_re
 set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+
+set uncollapse_jump                        # Jump to 1st unread when uncollapsing thread
+unset collapse_unread                      # Don't collapse on an unread message
+folder-hook . "exec collapse-all"          # Always collapse, always! :p
+
+
 
 # Index Key Bindings ---------------------------------
 bind index gg       first-entry
