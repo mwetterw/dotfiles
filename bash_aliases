@@ -1,3 +1,6 @@
+function calc() {
+    echo "$@" | bc -l
+}
 alias iptl='sudo iptables --line-numbers -vnL'
 
 alias dm='docker-machine'
