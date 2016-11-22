@@ -287,6 +287,9 @@ set switchbuf=useopen,usetab,newtab
 " Tab display
 set showtabline=0
 
+" jkjk smart escape :)
+inoremap jk <ESC>
+
 " Split towards the right
 set splitright
 
