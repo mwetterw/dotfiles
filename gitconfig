@@ -13,6 +13,7 @@
     redate = "!f() { git filter-branch --env-filter 'export GIT_COMMITTER_DATE=\"$GIT_AUTHOR_DATE\"' $@ --; }; f"
 
     ahd = "!f() { remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null); [ -n \"$remote\" ] && git log $remote..; }; f"
+    bhd = "!f() { remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null); [ -n \"$remote\" ] && git log ..$remote; }; f"
 
     amd = commit --amend -aC HEAD
     rmt = remote -v show
