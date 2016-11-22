@@ -23,6 +23,7 @@
     rst = reset
     cp = cherry-pick
     dc = diff --cached
+    br = branch
 
 [merge]
     defaultToUpstream = true
