@@ -1,0 +1,14 @@
+# vim: filetype=sh
+
+# See keyboard(5) and xkeyboard-config(7)
+
+# TypeMatrix English US QWERTY
+setxkbmap \
+    -model tm2030USB \
+    -layout us,fr \
+    -variant ,latin9 \
+    -option \
+    -option compose:ralt \
+    -option lv3:menu_switch \
+    -option eurosign:e \
+    -option grp:alt_shift_toggle

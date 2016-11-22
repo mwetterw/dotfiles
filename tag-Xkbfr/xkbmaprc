@@ -1,0 +1,15 @@
+# vim: filetype=sh
+
+# See keyboard(5) and xkeyboard-config(7)
+
+# Français AZERTY
+setxkbmap \
+    -model pc105 \
+    -layout fr,us \
+    -variant latin9, \
+    -option \
+    -option compose:menu \
+    -option caps:none \
+    -option lv3:ralt_switch \
+    -option eurosign:e \
+    -option grp:alt_shift_toggle

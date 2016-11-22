@@ -7,6 +7,10 @@ if [ ! -x ~/.dotfiles/powerline-shell/powerline-shell.py ]; then
     cd ~/.dotfiles/powerline-shell && ./install.py
 fi
 
+if [ -f ~/.xkbmaprc ]; then
+    . ~/.xkbmaprc
+fi
+
 if [ -d ~/.mutt ]; then
     mkdir -p ~/.mutt/cache/headers
     mkdir -p ~/.mutt/cache/bodies
