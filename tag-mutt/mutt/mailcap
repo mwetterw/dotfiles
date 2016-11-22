@@ -1,3 +1,6 @@
+# Default MIME if we don't know
+application/octet-stream; vim %s
+
 # Images
 image/*;      feh --fullscreen %s
 
