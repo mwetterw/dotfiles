@@ -21,6 +21,7 @@ RESOURCES="$HOME/.Xresources.ad"
 RESOURCES_DIR="$HOME/.Xresources.d"
 
 XKB_CONF="$HOME/.xkbmaprc"
+XSESSION_LOCAL="$HOME/.xsessionrc.local"
 
 xset +fp "$FONTDIR"
 
@@ -62,5 +63,10 @@ fi
 
 # Disable annoying bell
 xset -b
+
+# Load custom xsession
+if [ -f "$XSESSION_LOCAL" ]; then
+    . $XSESSION_LOCAL
+fi
 
 exec awesome
