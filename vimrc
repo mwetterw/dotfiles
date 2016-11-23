@@ -172,6 +172,18 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
+function! GetSpelllang()
+    return  &spelllang
+endfunction
+
+function! AirlineInit()
+    call airline#parts#define_function('spelllang', 'GetSpelllang')
+    call airline#parts#define_condition('spelllang', '&spell')
+    let g:airline_section_a = airline#section#create_left(['mode', 'crypt', 'paste', 'spell','spelllang', 'iminsert'])
+endfunction
+
+autocmd User AirlineAfterInit call AirlineInit()
+
 " ---------------------------------------------------------------- }}}
 
 " Text, tab and indent related ----------------------------------- {{{
@@ -242,7 +254,8 @@ if has("gui_running")
 endif
 
 " Spelling
-set spelllang=fr,en,de
+set spelllang=fr
+nnoremap <leader>s :let &l:spelllang=( &l:spelllang == "en" ? "fr" : "en" )<CR>
 
 hi clear SpellBad
 hi SpellBad cterm=italic,bold,underline ctermfg=208
