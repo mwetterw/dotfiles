@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ $# -lt 1 ]; then
+    echo "Usage: git bd [<remote>] <branch>"
+    return 1
+fi
+
+if [ $# -eq 1 ]; then
+    branch="$1"
+else
+    remote="$1"
+    branch="$2"
+fi
+
+if [ -z "$remote" ]; then
+    remote="origin"
+fi
+
+git branch -D "$branch"
+git branch -Dr "$remote/$branch"
+git push "$remote" ":$branch"
