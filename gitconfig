@@ -29,6 +29,7 @@
     cp = cherry-pick
     dc = diff --cached
     br = branch
+    brls = branch -vva --list
     su = submodule update --init
 
 [merge]
