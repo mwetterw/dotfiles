@@ -20,7 +20,8 @@
     bd = "! _gitbd"
 
     amd = commit --amend -aC HEAD
-    rmt = remote -v show
+    rmt = remote
+    rmtls = remote -v show
 
     st = status
     ci = commit
