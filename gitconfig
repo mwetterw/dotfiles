@@ -23,6 +23,8 @@
     rmt = remote
     rmtls = remote -v show
 
+    mrproper = clean -fdx
+
     st = status
     ci = commit
     co = checkout
