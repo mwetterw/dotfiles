@@ -47,12 +47,8 @@ color index         color160        color235        "~v~(~F)!~N"                
 color index         color136        color235        "~v~(~F~N)"                 # collapsed thread with some unread & flagged
 color index         color64         color235        "~N~v~(~F~N)"               # collapsed thread with unread parent & flagged
 color index         color64         color235        "~N~v~(~F)"                 # collapsed thread with unread parent, no unread inside, but some flagged
-color index         color37         color235        "~v~(~p)"                   # collapsed thread with unread parent, no unread inside, some to me directly
 color index         color136        color160        "~v~(~D)"                   # thread with deleted (doesn't differentiate between all or partial)
-#color index         color136        color234        "~(~N)"                    # messages in threads with some unread
-#color index         color64         color234        "~S"                       # superseded messages
 color index         color64         color234        "~T"                        # tagged messages
-#color index         color166        color160        "~="                       # duplicated messages
 
 # message headers ------------------------------------------------------
 
