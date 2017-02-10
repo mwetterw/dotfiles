@@ -33,10 +33,10 @@ unset mail_check_recent
 unset user_agent         # Don't leak out Mutt version in sent emails
 
 # Header Options -------------------------------------
-ignore *                                         # ignore all headers
-unignore from: to: cc: date: subject: reply-to:  # show only these
-unhdr_order *                                    # some distros order things by default
-hdr_order from: to: cc: date: reply-to: subject: # and in this order
+ignore *                                                      # ignore all headers
+unignore return-path: from: to: cc: date: reply-to: subject:  # show only these
+unhdr_order *                                                 # some distros order things by default
+hdr_order return-path: from: to: cc: date: reply-to: subject: # and in this order
 
 set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
 alternative_order text/plain text/enriched text/html
