@@ -15,4 +15,5 @@ Plug 'tpope/vim-commentary'
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'matze/vim-lilypond', { 'for': 'lilypond' }
 Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'ARM9/arm-syntax-vim'
 call plug#end()
