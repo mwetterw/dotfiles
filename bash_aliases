@@ -4,6 +4,23 @@ calc() {
     echo "$@" | bc -l
 }
 
+metartaf() {
+    if [ "$#" -lt 1 ]; then
+        echo "No station provided"
+        return 1
+    fi
+
+    for icao in "$@"; do
+        echo "--- $icao ---"
+        curl -Ss --fail "http://tgftp.nws.noaa.gov/data/observations/metar/stations/${icao}.TXT"
+        echo
+        curl -Ss --fail "http://tgftp.nws.noaa.gov/data/forecasts/taf/stations/${icao}.TXT"
+        echo "------------"
+        echo
+        echo
+    done
+}
+
 alias iptl='sudo iptables --line-numbers -vnL'
 
 alias dm='docker-machine'
