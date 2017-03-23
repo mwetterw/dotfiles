@@ -142,6 +142,8 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint' , 'govet']
 let g:syntastic_python_checkers = ['pyflakes', 'pylint']
 
+let g:linuxsty_patterns = [ "/linux/" ]
+
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 

@@ -16,4 +16,5 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'matze/vim-lilypond', { 'for': 'lilypond' }
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'ARM9/arm-syntax-vim'
+Plug 'vivien/vim-linux-coding-style'
 call plug#end()
