@@ -15,6 +15,7 @@ folder-hook . "exec collapse-all"          # Always collapse, always! :p
 
 
 # Index Key Bindings ---------------------------------
+bind index g  noop
 bind index gg       first-entry
 bind index G        last-entry
 
