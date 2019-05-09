@@ -8,6 +8,12 @@ fi
 
 cd
 
+# Chinese fonts for simplified and traditional Chinese (Firefox)
+# Serif: WenQuanYi Micro Hei
+# Sans-Serif: Noto Sans CJK SC (TC for traditional)
+# Mono: Noto Sans Mono CJK SC (TC for traditional)
+sudo apt install -y fonts-wqy-microhei fonts-wqy-zenhei fonts-noto-cjk
+
 echo "Cloning fonts repository..."
 git clone https://github.com/powerline/fonts.git
 
