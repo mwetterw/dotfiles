@@ -308,6 +308,29 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey,           }, "q",      function (c) c:kill()                         end),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
+
+    -- Maximize client across all screens
+    awful.key({ modkey, "Shift" }, "Return",
+        function (c)
+            c.floating = true
+            local geo = screen[1].geometry
+            geo.x2 = geo.x + geo.width
+            geo.y2 = geo.y + geo.height
+
+            for s = 1, screen.count() do
+                local geo2 = screen[s].geometry
+                geo.x = math.min(geo.x, geo2.x)
+                geo.y = math.min(geo.y, geo2.y)
+                geo.x2 = math.max(geo.x2, geo2.x + geo2.width)
+                geo.y2 = math.max(geo.y2, geo2.y + geo2.height)
+            end
+            c:geometry {
+                x = geo.x,
+                y = geo.y,
+                width = geo.x2 - geo.x,
+                height = geo.y2 - geo.y
+            }
+        end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end),
     awful.key({ modkey,           }, "n",
