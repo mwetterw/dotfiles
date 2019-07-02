@@ -12,9 +12,9 @@ metartaf() {
 
     for icao in "$@"; do
         echo "--- $icao ---"
-        curl -Ss --fail "http://tgftp.nws.noaa.gov/data/observations/metar/stations/${icao}.TXT"
+        curl -Ss --fail "https://tgftp.nws.noaa.gov/data/observations/metar/stations/${icao}.TXT"
         echo
-        curl -Ss --fail "http://tgftp.nws.noaa.gov/data/forecasts/taf/stations/${icao}.TXT"
+        curl -Ss --fail "https://tgftp.nws.noaa.gov/data/forecasts/taf/stations/${icao}.TXT"
         echo "------------"
         echo
         echo
