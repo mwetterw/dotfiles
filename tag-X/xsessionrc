@@ -46,6 +46,8 @@ urxvtd -q -o -f
 
 xscreensaver -no-capture-stderr -log /dev/null > /dev/null 2>&1 &
 
+export PASSWORD_STORE_X_SELECTION=primary
+
 if type connman-ui-gtk > /dev/null 2>&1; then
     connman-ui-gtk > /dev/null 2>&1 &
 fi
