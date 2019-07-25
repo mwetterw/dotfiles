@@ -1,5 +1,8 @@
 ! Fonts
-URxvt.font: xft:Inconsolata for Powerline:regular:size=13,xft:AR PL UKai TW,xft:Unifont:size=10
+URxvt.font: xft:Inconsolata for Powerline:regular:size=13,xft:WenQuanYi Micro Hei Mono:pixelsize=18:minspace=true,xft:Unifont:pixelsize=18
+! ,xft:Noto Sans CJK TC Medium:pixelsize=22:minspace=true
+! xft:WenQuanYi Micro Hei Mono:pixelsize=18:minspace=true
+! ,xft:Unifont:size=10
 URxvt.letterSpace: 0
 
 ! Input Method
