@@ -300,7 +300,7 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
+    awful.key({ modkey }, "p", function() awful.util.spawn_with_shell("rofi-pass") end)
 )
 
 clientkeys = awful.util.table.join(
