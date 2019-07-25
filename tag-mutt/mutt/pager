@@ -9,6 +9,7 @@ bind pager G    bottom
 bind pager R    group-reply
 bind pager \Cd  half-down
 bind pager \Cu  half-up
+bind pager <F4>     sidebar-toggle-visible
 
 # Pager View Options ---------------------------------
 set pager_format = "[%b] [%Z] %D [From: %f] %> [%e/%E] %5c%"
