@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+regex='(((http|https|ftp|gopher)|mailto)[.:][^ >"\t]*|www\.[-a-z0-9.]+)[^ .,;\t>">\):]'
+url=$(grep -Po "$regex" | rofi -dmenu -p "Go:") || exit 0
+
+[ -z "$url" ] && exit 0
+
+xdg-open "$url"

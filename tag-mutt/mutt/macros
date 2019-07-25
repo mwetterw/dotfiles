@@ -1,7 +1,7 @@
 # vim: filetype=muttrc
 
-# Urlview to open links in mail bodies
-macro pager \Cu "|urlview<enter>" "call urlview to open links"
+# rofi-url to open links in mail bodies
+macro pager \Co "|rofi-url<enter>" "call rofi-url to open links"
 
 # Saner copy/move dialogs
 macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
