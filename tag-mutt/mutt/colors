@@ -54,7 +54,8 @@ color index         color64         color234        "~T"                        
 
 #color header        color240        color234        "^"
 color hdrdefault    color240        color234
-color header        color241        color234        "^(From)|^(Return-Path)"
+color header        color247        color234        "^(From)"
+color header        color4          color234        "^(Return-Path)"
 color header        color33         color234        "^(Subject)"
 
 # body -----------------------------------------------------------------
