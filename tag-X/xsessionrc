@@ -41,9 +41,6 @@ if type keychain > /dev/null 2>&1; then
     eval `keychain --clear --noask --agents ssh,gpg --eval`
 fi
 
-# Using urxvt daemon saves RAM
-urxvtd -q -o -f
-
 xscreensaver -no-capture-stderr -log /dev/null > /dev/null 2>&1 &
 
 export PASSWORD_STORE_X_SELECTION=primary
