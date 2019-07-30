@@ -14,6 +14,9 @@ text/html; links -html-assume-codepage utf-8 -html-numbered-links 1 -dump %s; na
 # Plain
 text/plain; vim %s
 
+# Calendar
+text/calendar; khal printics; copiousoutput
+
 # Diff
 text/x-diff; vim %s
 

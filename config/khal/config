@@ -1,0 +1,11 @@
+[calendars]
+
+[locale]
+timeformat = %H:%M
+dateformat = %d/%m/%Y
+longdateformat = %d/%m/%Y
+datetimeformat = %d/%m/%Y %H:%M
+longdatetimeformat = %d/%m/%Y %H:%M
+
+[view]
+agenda_event_format = {title}{nl}{repeat-symbol}{start} → {end-necessary} [{status}]{nl}@{location}{nl}--------------------------{nl}{description}
