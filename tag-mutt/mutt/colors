@@ -59,6 +59,13 @@ color header        color4          color234        "^(Return-Path)"
 color header        color33         color234        "^(Subject)"
 
 # body -----------------------------------------------------------------
+#   Calendar events
+color body          color247        color234        "^From: .*"
+color body          color33         color234        "^Subject: .*"
+color body          color172        color234        "^Date: .*[0-9]{2,4} "
+color body          color139        color234        "^Location: .*"
+color body          color2          color234        "\\[CONFIRMED\\]"
+color body          color1          color234        "\\[CANCELLED\\]"
 
 color quoted        color33         color234
 color quoted1       color37         color234

@@ -8,4 +8,4 @@ datetimeformat = %d/%m/%Y %H:%M
 longdatetimeformat = %d/%m/%Y %H:%M
 
 [view]
-agenda_event_format = {title}{nl}{repeat-symbol}{start} → {end-necessary} [{status}]{nl}@{location}{nl}--------------------------{nl}{description}
+agenda_event_format = {nl}From: {organizer}{nl}Date: {repeat-symbol}{start} → {end-necessary} [{status}]{nl}Location: {location}{nl}Subject: {title}{nl}--------------------------{nl}{description}
