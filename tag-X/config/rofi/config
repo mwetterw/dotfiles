@@ -1,6 +1,6 @@
 rofi.show:run
 rofi.theme:.config/rofi/theme.rasi
-rofi.terminal:urxvtc
+rofi.terminal:urxvt
 rofi.sort:true
 rofi.levenshtein-sort:false
 rofi.matching:fuzzy

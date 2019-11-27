@@ -31,7 +31,6 @@ alias dpsa='docker ps -a | head'
 
 alias lsbk='lsblk -f -o "+TRAN,SIZE,MODEL"'
 
-
 if [ -f ~/.bash_aliases.local ]; then
     source ~/.bash_aliases.local
 fi

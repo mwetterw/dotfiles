@@ -3,8 +3,10 @@
 [user]
     name = Martin Wetterwald
     email = martin@wetterwald.eu
+
 [color]
     ui = auto
+
 [push]
     default = upstream
 
@@ -33,19 +35,27 @@
     dc = diff --cached
     br = branch
     brls = branch -vva --list
-    su = submodule update --init
+    su = "!git submodule sync -q --recursive && git submodule update --init --recursive"
 
 [merge]
     defaultToUpstream = true
     tool = vimdiff
     conflictstyle = diff3
+
 [core]
     autocrlf = input
     editor = vim
+
 [mergetool]
     prompt = false
+
 [http]
     postBuffer = 524288000
 
 [include]
     path = .gitconfig.local
+
+[status]
+	submodulesummary = true
+[diff]
+	submodule = log
