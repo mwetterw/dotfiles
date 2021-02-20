@@ -12,7 +12,8 @@ cd
 # Serif: WenQuanYi Micro Hei
 # Sans-Serif: Noto Sans CJK SC (TC for traditional)
 # Mono: Noto Sans Mono CJK SC (TC for traditional)
-sudo apt install -y fonts-wqy-microhei fonts-wqy-zenhei fonts-noto-cjk
+# sudo apt install -y fonts-wqy-microhei fonts-wqy-zenhei fonts-noto-cjk
+# pacman -S wqy-microhei wqy-zenhei noto-fonts-cjk
 
 echo "Cloning fonts repository..."
 git clone https://github.com/powerline/fonts.git
