@@ -1,0 +1,51 @@
+# vim: filetype=sh
+
+FONTDIR="$HOME/.local/share/fonts"
+RESOURCES="$HOME/.Xresources.ad"
+RESOURCES_DIR="$HOME/.Xresources.d"
+
+XKB_CONF="$HOME/.xkbmaprc"
+XPROFILE_LOCAL="$HOME/.xprofile.local"
+
+SCREEN_LAYOUT="$HOME/.screenlayout/default"
+
+[ -f "$SCREEN_LAYOUT" ] && . $SCREEN_LAYOUT
+
+xset +fp "$FONTDIR"
+xset r rate 200 44
+
+# Keyboard mapping configuration
+[ -f "$XKB_CONF" ] && . $XKB_CONF
+
+if [ -f "$RESOURCES" ] && [ -d "$RESOURCES_DIR" ]; then
+  xrdb -I"$RESOURCES_DIR" -load "$RESOURCES"
+fi
+
+if type keychain > /dev/null 2>&1; then
+    eval `keychain --clear --noask --agents ssh,gpg --eval`
+fi
+
+xscreensaver -no-capture-stderr -log /dev/null > /dev/null 2>&1 &
+
+export PASSWORD_STORE_X_SELECTION=primary
+
+if type connman-ui-gtk > /dev/null 2>&1; then
+    connman-ui-gtk > /dev/null 2>&1 &
+fi
+
+if type fcitx > /dev/null 2>&1; then
+    fcitx > /dev/null 2>&1
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS=@im=fcitx
+fi
+
+if type numlockx > /dev/null 2>&1; then
+    numlockx on
+fi
+
+# Disable annoying bell
+xset -b
+
+# Load custom xprofile
+[ -f "$XPROFILE_LOCAL" ] && . $XPROFILE_LOCAL
