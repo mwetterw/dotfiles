@@ -1,2 +1,3 @@
+#include "x.ad"
 #include "urxvt.ad"
 #include "xscreensaver.ad"
