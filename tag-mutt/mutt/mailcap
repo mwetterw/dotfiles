@@ -1,5 +1,5 @@
 # Default MIME if we don't know
-application/octet-stream; vim %s
+application/octet-stream; vim -b %s
 
 # Images
 image/*; feh --fullscreen %s
@@ -24,3 +24,6 @@ text/x-diff; vim %s
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice %s
 application/vnd.openxmlformats-officedocument.presentationml.presentation; libreoffice %s
+
+# Markdown
+text/markdown; vim %s
