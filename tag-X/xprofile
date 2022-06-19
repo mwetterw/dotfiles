@@ -22,19 +22,13 @@ if [ -f "$RESOURCES" ] && [ -d "$RESOURCES_DIR" ]; then
 fi
 
 if type keychain > /dev/null 2>&1; then
-    eval `keychain --clear --noask --agents ssh,gpg --eval`
+    eval `keychain --clear --noask --timeout 1020 --agents ssh --eval`
 fi
-
-xscreensaver -no-capture-stderr -log /dev/null > /dev/null 2>&1 &
 
 export PASSWORD_STORE_X_SELECTION=primary
 
-if type connman-ui-gtk > /dev/null 2>&1; then
-    connman-ui-gtk > /dev/null 2>&1 &
-fi
-
-if type fcitx > /dev/null 2>&1; then
-    fcitx > /dev/null 2>&1
+if type fcitx5 > /dev/null 2>&1; then
+    fcitx5 > /dev/null 2>&1 &
     export GTK_IM_MODULE=fcitx
     export QT_IM_MODULE=fcitx
     export XMODIFIERS=@im=fcitx
