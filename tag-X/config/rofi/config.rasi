@@ -2,5 +2,5 @@ configuration {
 	terminal: "urxvt";
 	sort: true;
 	matching: "fuzzy";
-	theme: "theme.rasi";
 }
+@theme "theme.rasi"
