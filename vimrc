@@ -140,14 +140,17 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint' , 'govet']
-let g:syntastic_python_checkers = ['pyflakes', 'pylint']
+let g:syntastic_python_checkers = ['pylint', 'pyflakes']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 2
 
 let g:linuxsty_patterns = [ "/linux/" ]
 
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "gofmt"
+let g:go_fmt_options = { 'gofmt': '-s' }
 let g:go_play_open_browser = 0
 let g:go_fmt_fail_silently = 1
 let g:go_highlight_functions = 1
@@ -479,13 +482,13 @@ nnoremap <silent> <leader>w :w<cr>
 nmap <silent> <leader>q :q<cr>
 
 " Fast fugitive
-nnoremap <silent> <leader>gst :Gst<cr>
-nnoremap <silent> <leader>gcc :Gcommit<cr>
+nnoremap <silent> <leader>gst :Git<cr>
+nnoremap <silent> <leader>gcc :Git commit<cr>
 nnoremap <silent> <leader>gco :Gread<cr>
 nnoremap <silent> <leader>ga :Gwrite<cr>
 nnoremap <silent> <leader>gl :Git! log<cr>
-nnoremap <silent> <leader>gb :Gblame<cr>
-nnoremap <silent> <leader>gd :Gdiff<cr>
+nnoremap <silent> <leader>gb :Git blame<cr>
+nnoremap <silent> <leader>gd :Git diff<cr>
 nnoremap <silent> <leader>gdd :Gsdiff :1 \| Gvdiff<cr>
 nnoremap <silent> <leader>gdo :diffoff \| only<cr>
 

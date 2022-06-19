@@ -12,7 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tikhomirov/vim-glsl'
 Plug 'tpope/vim-commentary'
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'for': ['go', 'gosum', 'gohtmltmpl'] }
 Plug 'matze/vim-lilypond', { 'for': 'lilypond' }
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'ARM9/arm-syntax-vim'
