@@ -10,10 +10,8 @@ if [ -x ~/.dotfiles/powerline-shell/powerline-shell.py ]; then
     fi
 fi
 
-if [ -f /etc/bash_completion.d/password-store ]; then
-    source /etc/bash_completion.d/password-store
-fi
+[ -f /etc/bash_completion.d/password-store ] && . /etc/bash_completion.d/password-store
 
-if [ -f ~/.bashrc.local ]; then
-    source ~/.bashrc.local
-fi
+[ -f "$HOME/.bashrc.local" ] && . "$HOME/.bashrc.local"
+
+[ -f "$HOME/.local/bin/z.sh" ] && . "$HOME/.local/bin/z.sh"
