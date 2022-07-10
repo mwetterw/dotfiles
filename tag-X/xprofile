@@ -43,3 +43,5 @@ xset -b
 
 # Load custom xprofile
 [ -f "$XPROFILE_LOCAL" ] && . $XPROFILE_LOCAL
+
+exec i3
