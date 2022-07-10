@@ -1,0 +1,70 @@
+# i3 config file (v4)
+set $mod Mod4
+
+# QWERTY: j k l ;
+# AZERTY: j k l m ù *
+set $left 44
+set $down 45
+set $up 46
+set $right 47
+
+# i3 control
+bindsym $mod+Shift+r reload
+bindsym $mod+Control+Shift+r restart
+bindsym $mod+Shift+q exec "i3-msg exit"
+
+font pango:DejaVu Sans Mono 10
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- lockscreen
+bindsym Control+Mod1+l exec "loginctl lock-session"
+
+include workspaces.conf
+
+bindsym $mod+q kill
+
+bindcode $mod+$left focus left
+bindcode $mod+$down focus down
+bindcode $mod+$up focus up
+bindcode $mod+$right focus right
+bindsym $mod+i focus parent
+bindsym $mod+o focus child
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle global
+
+bindsym $mod+t layout tabbed
+bindsym $mod+y layout stacking
+bindsym $mod+u layout toggle split
+
+floating_modifier $mod
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+bindsym $mod+Control+$left resize shrink width 10 px or 10 ppt
+bindsym $mod+Control+$down resize grow height 10 px or 10 ppt
+bindsym $mod+Control+$up resize shrink height 10 px or 10 ppt
+bindsym $mod+Control+$right resize grow width 10 px or 10 ppt
+
+# Applications
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+r exec "rofi -modi run -show run"
+bindsym $mod+s exec "rofi -modi ssh -show ssh"
+bindsym $mod+w exec "rofi -modi window -show window"
+bindsym $mod+p exec "rofi-pass"
+
+bar {
+        status_command i3status
+        tray_output primary
+}
+
+include volume.conf
+
+include conf.d/*.conf

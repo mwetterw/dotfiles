@@ -2,4 +2,4 @@
 
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-exec awesome
+exec i3

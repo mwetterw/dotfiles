@@ -1,0 +1,9 @@
+#!/bin/sh
+IMG=$(mktemp /tmp/i3lock-XXXXX.png)
+
+import -window root $IMG
+convert $IMG -scale 10% -blur 0x1.5 -resize 1000% $IMG
+
+i3lock --nofork -ue -i $IMG
+
+rm $IMG
