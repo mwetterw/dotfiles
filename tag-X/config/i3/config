@@ -62,10 +62,10 @@ bindcode $mod+$right focus right
 bindsym $mod+i focus parent
 bindsym $mod+o focus child
 
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
+bindcode $mod+Shift+$left move left
+bindcode $mod+Shift+$down move down
+bindcode $mod+Shift+$up move up
+bindcode $mod+Shift+$right move right
 
 bindsym $mod+h split h
 bindsym $mod+v split v
@@ -81,10 +81,10 @@ floating_modifier $mod
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
-bindsym $mod+Control+$left resize shrink width 10 px or 10 ppt
-bindsym $mod+Control+$down resize grow height 10 px or 10 ppt
-bindsym $mod+Control+$up resize shrink height 10 px or 10 ppt
-bindsym $mod+Control+$right resize grow width 10 px or 10 ppt
+bindcode $mod+Control+$left resize shrink width 10 px or 10 ppt
+bindcode $mod+Control+$down resize grow height 10 px or 10 ppt
+bindcode $mod+Control+$up resize shrink height 10 px or 10 ppt
+bindcode $mod+Control+$right resize grow width 10 px or 10 ppt
 
 # Applications
 bindsym $mod+Return exec urxvt
