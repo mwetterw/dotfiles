@@ -1,6 +1,6 @@
 DOTFILES_DIRS="$HOME/.dotfiles"
 EXCLUDES="README.md install*.sh powerline-shell"
-SYMLINK_DIRS="vim"
+SYMLINK_DIRS="plugged"
 COPY_ALWAYS="config/khal/config"
 
 
