@@ -1,3 +1,12 @@
+DOTFILES_DIRS="$HOME/.dotfiles"
 EXCLUDES="README.md install*.sh powerline-shell"
 SYMLINK_DIRS="vim"
 COPY_ALWAYS="config/khal/config"
+
+
+RCD_FOLDER_GLOB=~/.rc.d/*
+
+if ls $RCD_FOLDER_GLOB >/dev/null 2>&1
+then
+    . $RCD_FOLDER_GLOB
+fi
