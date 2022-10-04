@@ -20,4 +20,5 @@ Plug 'vivien/vim-linux-coding-style'
 Plug 'fatih/vim-nginx'
 Plug 'stevearc/vim-arduino'
 Plug 'nfnty/vim-nftables'
+Plug 'w0rp/ale'
 call plug#end()
