@@ -57,9 +57,15 @@
 
 [status]
 	submodulesummary = true
+
 [diff]
 	submodule = log
+
 [pull]
 	ff = only
+
 [init]
 	defaultBranch = master
+
+[fetch]
+	prune = true
