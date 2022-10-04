@@ -517,3 +517,5 @@ nnoremap <silent> <Leader>cf :cr<cr>
 nnoremap <silent> <Leader>cl :cla<cr>
 "nnoremap <silent> <Leader>cc :cc<cr> "This is done by errormarker plugin
 " ---------------------------------------------------------------- }}}
+
+runtime! vimrc.d/*.vim
