@@ -1,0 +1,9 @@
+#!/bin/sh
+
+output=$(i3-msg -t get_tree | jq -r '..| select(.window_properties?.instance == "scratchpad").output')
+
+case "$output" in
+    "")     urxvt -name "scratchpad" & ;;
+    "__i3") i3-msg '[instance="^scratchpad$"] scratchpad show' ;;
+    *)      i3-msg '[instance="^scratchpad$"] move to scratchpad' ;;
+esac
