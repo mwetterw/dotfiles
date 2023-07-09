@@ -136,18 +136,7 @@ set matchtime=20
 " For regular expressions turn magic on
 set magic
 
-let g:syntastic_check_on_wq=0
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_go_checkers = ['go', 'gofmt', 'golint' , 'govet']
-let g:syntastic_python_checkers = ['pylint', 'pyflakes']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 2
-
-let g:linuxsty_patterns = [ "/linux/" ]
-
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:linuxsty_patterns = [ "/linux/", "/linux-net/" ]
 
 let g:go_fmt_command = "gofmt"
 let g:go_fmt_options = { 'gofmt': '-s' }
