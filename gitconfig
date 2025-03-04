@@ -7,8 +7,8 @@
 [color]
     ui = auto
 
-[push]
-    default = upstream
+[column]
+    ui = auto
 
 [alias]
     lg = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -20,6 +20,8 @@
     bhd = "!f() { remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u} 2> /dev/null); [ -n \"$remote\" ] && git log ..$remote; }; f"
 
     bd = "! _gitbd"
+
+    introduced = name-rev --tags --name-only
 
     amd = commit --amend -aC HEAD
     rmt = remote
@@ -56,16 +58,29 @@
     path = .gitconfig.local
 
 [status]
-	submodulesummary = true
+    submodulesummary = true
 
 [diff]
-	submodule = log
+    submodule = log
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
 
-[pull]
-	ff = only
+[branch]
+    sort = -committerdate
 
-[init]
-	defaultBranch = master
+[push]
+    default = upstream
+    autoSetupRemote = true
 
 [fetch]
-	prune = true
+    prune = true
+    pruneTags = true
+    all = true
+
+[init]
+    defaultBranch = master
+
+[tag]
+    sort = version:refname
