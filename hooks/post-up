@@ -1,6 +1,11 @@
 #!/bin/sh
-if [ -d ~/.vim ]; then
-    vim -u "$HOME"/.vim/plugins.vim +PlugInstall +qa
+VIM_FOLDER="$HOME/.vim"
+VIM_PLUG="$VIM_FOLDER/autoload/plug.vim"
+if [ -d "$VIM_FOLDER" ] && [ ! -f "$VIM_PLUG" ]; then
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+	vim -u "$VIM_FOLDER/plugins.vim" +PlugInstall +qa
 fi
 
 if [ ! -x ~/.dotfiles/powerline-shell/powerline-shell.py ]; then
