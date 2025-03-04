@@ -1,29 +1,15 @@
-function install_rcm()
-{
-    version=1.3.0
-    curl -LO https://thoughtbot.github.io/rcm/dist/rcm-"$version".tar.gz && \
+#!/bin/sh
 
-    tar -xvf rcm-"$version".tar.gz && \
-    cd rcm-"$version" && \
-
-    ./configure --prefix="$HOME"/.local && \
-    make && \
-    make install && \
-
-    cd .. && \
-    rm -rf rcm-"$version"*
+die() {
+	echo "$@" >&2
+	exit 1
 }
 
-function initial_setup()
-{
-    env RCRC=$HOME/.dotfiles/rcrc PATH=$HOME/.local/bin:$PATH rcup -f
-    exec bash
-}
+command -v rcup || die "Install rcm"
 
+env \
+	RCRC="$HOME/.dotfiles/rcrc" \
+	PATH="$HOME/.local/bin:$PATH" \
+	rcup -f
 
-which rcup &> /dev/null
-if [ $? -ne 0 ]; then
-    install_rcm
-fi
-
-initial_setup
+exec bash
